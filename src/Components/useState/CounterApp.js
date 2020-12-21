@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import './Counter.css'
 
 export const CounterApp = () => {
     return (
