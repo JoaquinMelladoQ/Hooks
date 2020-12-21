@@ -9,10 +9,14 @@ export const useCounter = (initialState = 10) => {
     const decrement = () => {
         setState( state - 1 )
     }
+    const reset = () => {
+        setState( initialState )
+    }
 
     return {
         state,
         increment,
-        decrement
+        decrement,
+        reset
     }
 }
