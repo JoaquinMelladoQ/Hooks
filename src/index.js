@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { CounterApp } from './Components/useState/CounterApp';
+import { CounterWithCustomHook } from './Components/useState/CounterWithCustomHook'
+// import { CounterApp } from './Components/useState/CounterApp';
 // import { HookApp } from './HookApp'
 
 
+
 ReactDOM.render(
-    <CounterApp />,
+    <CounterWithCustomHook/>,
   document.getElementById('root')
 );
 
