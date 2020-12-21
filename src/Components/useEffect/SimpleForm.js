@@ -16,7 +16,8 @@ export const SimpleForm = () => {
     })
 
     const handleInputChange = (e) => {
-         console.log(e.target)
+         console.log(e.target.name)
+         console.log(e.target.value)
     }
 
     return (
