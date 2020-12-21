@@ -29,6 +29,17 @@ export const CounterApp = () => {
             >
                 +1
             </button>
+            <button 
+            className="btn btn-success"
+            onClick={ () => {
+                setState({
+                    ...state,
+                    Counter1: Counter1 - 1
+                })
+            } }
+            >
+                -1
+            </button>
         </Fragment>
     )
 }
