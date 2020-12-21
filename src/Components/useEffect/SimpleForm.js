@@ -13,11 +13,14 @@ export const SimpleForm = () => {
 
     useEffect(() => {
         console.log('hey')
-    })
+    }, [])
 
-    const handleInputChange = (e) => {
-         console.log(e.target.name)
-         console.log(e.target.value)
+    const handleInputChange = ({ target }) => {
+    
+         setFormState({
+             ...formState,
+            [target.name]: target.value
+         })
     }
 
     return (
