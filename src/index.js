@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { FormWithCustomHook } from './Components/useEffect/FormWithCustomHook'
+import { MultipleCustomHooks } from './Components/Example/MultipleCustomHooks'
 // import { CounterWithCustomHook } from './Components/useState/CounterWithCustomHook'
 // import { CounterApp } from './Components/useState/CounterApp';
 // import { HookApp } from './HookApp'
@@ -8,7 +8,7 @@ import { FormWithCustomHook } from './Components/useEffect/FormWithCustomHook'
 
 
 ReactDOM.render(
-    <FormWithCustomHook/>,
+    <MultipleCustomHooks/>,
   document.getElementById('root')
 );
 
