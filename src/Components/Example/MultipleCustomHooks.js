@@ -5,7 +5,7 @@ import './Example.css'
 
 export const MultipleCustomHooks = () => {
 
-    const { counter, increment } = useCounter(1)
+    const { counter, increment, decrement } = useCounter(1)
     const { loading, data } = useFetch(`https://www.breakingbadapi.com/api/quotes/${ counter }`)
     const { author, quote } = !!data && data[0]
     return (
@@ -35,6 +35,9 @@ export const MultipleCustomHooks = () => {
             }
             <button className='btn btn-primary' onClick={increment}>
                 Next quote
+            </button>
+            <button className='btn btn-success' onClick={decrement}>
+                Previous quote
             </button>
 
         </div>
