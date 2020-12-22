@@ -19,3 +19,7 @@
 + Here's the condition:
 
 ![CounterApp](assets/condition.png)
+
++ A correct way to clean an event and prevent lots of memory consumption
+
+![CounterApp](assets/cleaner.png)

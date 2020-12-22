@@ -3,9 +3,16 @@ import React, { useEffect } from 'react'
 export const Message = () => {
 
     useEffect(() => {
-        console.log('mount component')
+        
+        const mouseMove = (e) => {
+            const coors = { x: e.y, y: e.y }
+            console.log(coors)
+        }
+        
+        window.addEventListener('mousemove', mouseMove)
+
         return () => {
-            console.log('unmount component')
+            window.removeEventListener('mousemove', mouseMove)
         }
     }, [])
 
