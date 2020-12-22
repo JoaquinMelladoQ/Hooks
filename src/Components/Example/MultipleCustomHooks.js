@@ -14,6 +14,14 @@ export const MultipleCustomHooks = () => {
             <div className="alert alert-info text-center">
                 Loading...
             </div>
+            <blockquote className="blockquote text-right">
+                <p className="mb-0">
+                    HolaMundo
+                </p>
+                <footer className="blockquote-footer">
+                    Joaco
+                </footer>
+            </blockquote>
         </div>
     )
 }
