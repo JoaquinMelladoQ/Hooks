@@ -4,8 +4,11 @@ import './Example.css'
 
 export const MultipleCustomHooks = () => {
 
-    const { loading } = useFetch(`https://www.breakingbadapi.com/api/quotes/1`)
+    const { loading, data } = useFetch(`https://www.breakingbadapi.com/api/quotes/1`)
     // console.log(state)
+    const { author, quote } = !!data && data[0]
+
+    console.log(data)
 
     return (
         <div>
