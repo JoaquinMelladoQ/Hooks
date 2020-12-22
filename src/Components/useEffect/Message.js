@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const Message = () => {
+    
+    const [coords, setCoords] = useState({ x: 0, y: 0 })
+    const { x, y } = coords
 
     useEffect(() => {
         
         const mouseMove = (e) => {
-            const coors = { x: e.y, y: e.y }
-            console.log(coors)
+            const coords = { x: e.y, y: e.y }
+            setCoords( coords )
         }
         
         window.addEventListener('mousemove', mouseMove)
@@ -19,6 +22,9 @@ export const Message = () => {
     return (
         <div>
             <h3>You are great!</h3>
+            <p>
+                x:{ x } y:{ y }
+            </p>
         </div>
     )
 }
