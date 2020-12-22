@@ -5,21 +5,13 @@ import './Effects.css'
 export const FormWithCustomHook= () => {
 
 
-    const [formState, setFormState] = useForm({
+    const [formValues, handleInputChange] = useForm({
         name: '',
         email: '',
         password: ''
     })
 
-    const { name, email, password } = formState
-
-    const handleInputChange = ({ target }) => {
-    
-         setFormState({
-             ...formState,
-            [target.name]: target.value
-         })
-    }
+    const { name, email, password } = formValues
 
     return (
         <Fragment>
