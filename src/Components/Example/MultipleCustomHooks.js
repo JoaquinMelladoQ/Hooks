@@ -8,7 +8,7 @@ export const MultipleCustomHooks = () => {
     // console.log(state)
     const { author, quote } = !!data && data[0]
 
-    console.log(data)
+    console.log(author, quote)
 
     return (
         <div>
@@ -27,10 +27,10 @@ export const MultipleCustomHooks = () => {
                     (
                         <blockquote className="blockquote text-right">
                             <p className="mb-0">
-                                HolaMundo
+                                { quote }
                             </p>
                             <footer className="blockquote-footer">
-                                Joaco
+                                { author }
                             </footer>
                         </blockquote>
                     )
