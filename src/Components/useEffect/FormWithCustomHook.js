@@ -1,4 +1,3 @@
-import React, { Fragment } from 'react'
 import { useForm } from '../../Hooks/useForm'
 import './Effects.css'
 
@@ -13,8 +12,13 @@ export const FormWithCustomHook= () => {
 
     const { name, email, password } = formValues
 
+    const handleSubmit = e => {
+        e.preventDefault()
+        console.log(formValues)
+    }
+
     return (
-        <Fragment>
+        <form onSubmit={ handleSubmit } >
              <h1>FormWithCustomHook</h1>
              <hr />   
 
@@ -51,7 +55,9 @@ export const FormWithCustomHook= () => {
                     onChange={ handleInputChange }
                 />
              </div>
-
-        </Fragment>
+            <button type="submit" className="btn btn-info">
+                Save
+            </button>
+        </form>
     )   
 }
