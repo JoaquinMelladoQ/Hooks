@@ -9,7 +9,11 @@ export const MultipleCustomHooks = () => {
 
     return (
         <div>
-            <h1>CustomHooks</h1>
+            <h1>Breaking Bad Quotes</h1>
+            <hr />
+            <div className="alert alert-info text-center">
+                Loading...
+            </div>
         </div>
     )
 }
