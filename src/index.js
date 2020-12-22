@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { MultipleCustomHooks } from './Components/Example/MultipleCustomHooks'
+import { FocusScreen } from './Components/useRef/FocusScreen'
 // import { CounterWithCustomHook } from './Components/useState/CounterWithCustomHook'
 // import { CounterApp } from './Components/useState/CounterApp';
 // import { HookApp } from './HookApp'
@@ -8,7 +8,7 @@ import { MultipleCustomHooks } from './Components/Example/MultipleCustomHooks'
 
 
 ReactDOM.render(
-    <MultipleCustomHooks/>,
+    <FocusScreen/>,
   document.getElementById('root')
 );
 
