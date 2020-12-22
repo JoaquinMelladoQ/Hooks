@@ -23,3 +23,8 @@
 + A correct way to clean an event and prevent lots of memory consumption
 
 ![CounterApp](assets/cleaner.png)
+
++ Another example but using useState instead of:
+
+![CounterApp](assets/coords-code.png)
+![CounterApp](assets/coords.png)
