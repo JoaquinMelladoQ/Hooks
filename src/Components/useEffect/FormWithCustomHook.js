@@ -6,10 +6,11 @@ export const FormWithCustomHook= () => {
 
     const [formState, setFormState] = useState({
         name: '',
-        email: ''
+        email: '',
+        password: ''
     })
 
-    const { name, email } = formState
+    const { name, email, password } = formState
 
     const handleInputChange = ({ target }) => {
     
@@ -29,7 +30,7 @@ export const FormWithCustomHook= () => {
                     type="text"
                     name="name"
                     className="from-control"
-                    placeholder="Your name"
+                    placeholder="Enter your name"
                     autocomplete="off"
                     value={ name }
                     onChange={ handleInputChange }
@@ -40,9 +41,20 @@ export const FormWithCustomHook= () => {
                     type="text"
                     name="email"
                     className="from-control"
-                    placeholder="Your email"
+                    placeholder="Enter your email"
                     autocomplete="off"
                     value={ email }
+                    onChange={ handleInputChange }
+                />
+             </div>
+             <div className="form-group">
+                <input
+                    type="password"
+                    name="password"
+                    className="from-control"
+                    placeholder="Enter your password"
+                    autocomplete="off"
+                    value={ password }
                     onChange={ handleInputChange }
                 />
              </div>
