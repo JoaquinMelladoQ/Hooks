@@ -1,10 +1,11 @@
 import React, { Fragment, useState } from 'react'
+import { useForm } from '../../Hooks/useForm'
 import './Effects.css'
 
 export const FormWithCustomHook= () => {
 
 
-    const [formState, setFormState] = useState({
+    const [formState, setFormState] = useForm({
         name: '',
         email: '',
         password: ''
