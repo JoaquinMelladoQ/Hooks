@@ -3,11 +3,11 @@ import '../useState/Counter.css'
 
 export const FocusScreen = () => {
 
-    const ref = useRef()
-    console.log(ref)
+    const inputRef = useRef()
+    // console.log(ref)
 
     const handleClick = () => {
-        document.querySelector('input').select()
+        inputRef.select()
     }
 
     return (
