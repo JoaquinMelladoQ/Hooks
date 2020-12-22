@@ -7,7 +7,7 @@ export const FocusScreen = () => {
     // console.log(ref)
 
     const handleClick = () => {
-        inputRef.select()
+        inputRef.current.select()
     }
 
     return (
@@ -15,7 +15,7 @@ export const FocusScreen = () => {
             <h1>Focus Screen</h1>
             <hr />
 
-            <input className="form-control" placeholder="Your name" 
+            <input ref={inputRef} className="form-control" placeholder="Your name" 
             />
 
             <button
