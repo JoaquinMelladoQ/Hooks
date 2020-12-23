@@ -12,6 +12,9 @@ export const RealExampleRef = () => {
             <hr />
 
             { show && <MultipleCustomHooks /> }
+            <button className="btn btn-primary mt-2">
+                Show/Hide
+            </button>
         </div>
     )
 }
