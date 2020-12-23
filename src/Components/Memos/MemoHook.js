@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { useCounter } from '../../Hooks/useCounter'
 
 import '../useEffect/Effects.css'
@@ -16,13 +16,15 @@ export const MemoHook = () => {
         return `${ iterations } iterations done`
     }
 
+    const memoHeavyProcess = useMemo(() => heavyProcess( counter ), [ counter ])
+
     return (
         <div>
             <h1>MemoHook</h1>
             <h3>Counter: <small>{ counter }</small></h3>
             <hr />
 
-            <p>{ heavyProcess( counter ) }</p>
+            <p>{ memoHeavyProcess }</p>
 
             <button className="btn btn-primary"  onClick={ increment } >
                 Add
