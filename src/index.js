@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Memorize } from './Components/Memos/Memorize'
+import { MemoHook } from './Components/Memos/MemoHook'
 
 ReactDOM.render(
-    <Memorize/>,
+    <MemoHook/>,
   document.getElementById('root')
 );
 
