@@ -13,12 +13,13 @@ export const useFetch = ( url ) => {
             .then( resp => resp.json() )
             .then( data => {
 
-               setState({
-                   loading: false,
-                   error: null,
-                   data
-               })
-                
+                setTimeout(() => {
+                    setState({
+                        loading: false,
+                        error: null,
+                        data
+                    })
+                }, 4000);
             })
     }, [url])
     return state
