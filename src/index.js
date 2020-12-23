@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { FocusScreen } from './Components/useRef/FocusScreen'
+import { RealExampleRef } from './Components/useRef/RealExampleRef'
 // import { CounterWithCustomHook } from './Components/useState/CounterWithCustomHook'
 // import { CounterApp } from './Components/useState/CounterApp';
 // import { HookApp } from './HookApp'
@@ -8,7 +8,7 @@ import { FocusScreen } from './Components/useRef/FocusScreen'
 
 
 ReactDOM.render(
-    <FocusScreen/>,
+    <RealExampleRef/>,
   document.getElementById('root')
 );
 
