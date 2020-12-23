@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { useCounter } from '../../Hooks/useCounter'
+import { heavyProcess } from '../../Helpers/HeavyProcess'
 
 import '../useEffect/Effects.css'
 
@@ -8,14 +9,6 @@ export const MemoHook = () => {
 
     const { counter, increment } = useCounter( 10 )
     const [show, setShow] = useState(true)
-
-    const heavyProcess = ( iterations ) => {
-        for (let i = 0; i < iterations; i++) {
-            console.log('There we are...')
-        }
-        return `${ iterations } iterations done`
-    }
-
     const memoHeavyProcess = useMemo(() => heavyProcess( counter ), [ counter ])
 
     return (
