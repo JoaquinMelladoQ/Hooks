@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { ShowIncrement } from './ShowIncrement'
 import '../../Components/useEffect/Effects.css'
 
@@ -8,6 +8,11 @@ export const CallBackHook = () => {
     const increment = () => {
         setCounter( counter + 1 )
     }
+
+    useCallback( () => {
+        setCounter( counter + 1 )
+    }, [setCounter] )
+
     return (
         <div>
             <h1>CallBack Hook: { counter } </h1>
