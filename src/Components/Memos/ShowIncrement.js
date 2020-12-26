@@ -1,8 +1,12 @@
 import React from 'react'
 
-export const ShowIncrement = () => {
+export const ShowIncrement = ({ increment }) => {
     return (
-        <button >
+        <button className="btn btn-primary" 
+            onClick ={() => {
+                increment()
+            }}
+            >
             Increment
         </button >
     )
