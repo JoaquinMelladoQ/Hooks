@@ -9,7 +9,7 @@ export const CallBackHook = () => {
     }
     return (
         <div>
-            <h1>CallBack Hook</h1>
+            <h1>CallBack Hook: { counter } </h1>
             <hr />
         </div>
     )
