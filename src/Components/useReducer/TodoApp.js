@@ -15,13 +15,25 @@ export const TodoApp = () => {
 
     return (
         <div>
-            <h1>Todo App</h1>
+            <h1>Todo App ({ todos.length }) </h1>
             <hr />
 
-            <ul>
-                <li>Hello</li>
-                <li>World</li>
-                <li>Hello again</li>
+            <ul className="list-group list-group-flush">
+                {
+                    todos.map( (todo, i) => (
+                        <li
+                        key={ todo.id }
+                        className="list-group-item"
+                        >
+                            <p className="text-center" >
+                                { i + 1 }. { todo.desc }
+                            </p>
+                            <button className="btn btn-danger" >
+                                Delete
+                            </button>
+                        </li>
+                    ) )
+                }
             </ul>
         </div>
     )
