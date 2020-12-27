@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react'
+import { todoReducer } from './todoReducer'
 import './Styles.css'
 
 const initialState = [{
@@ -9,7 +10,7 @@ const initialState = [{
 
 export const TodoApp = () => {
 
-    const [ state ] = useReducer( reducer, initialState )
+    const [ state ] = useReducer( todoReducer, initialState )
 
     return (
         <div>
