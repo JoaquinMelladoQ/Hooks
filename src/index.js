@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { CallBackHook } from './Components/Memos/CallBackHook'
+import { TodoApp } from './Components/useReducer/TodoApp'
 
 ReactDOM.render(
-    <CallBackHook/>,
+    <TodoApp/>,
   document.getElementById('root')
 );
 
