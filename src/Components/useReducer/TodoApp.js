@@ -13,6 +13,11 @@ export const TodoApp = () => {
     const [ todos ] = useReducer( todoReducer, initialState )
     console.log(todos)
 
+    const handleSubmit = (e) => {
+         e.preventDefault()
+         console.log('New task')
+    }
+
     return (
         <div>
             <h1>Todo App ({ todos.length }) </h1>
@@ -41,7 +46,7 @@ export const TodoApp = () => {
                     <h4>Add todo </h4>
                     <hr />
 
-                        <form>
+                        <form onSubmit={ handleSubmit } >
                             <input 
                                 type="text"
                                 name="description"
@@ -50,7 +55,9 @@ export const TodoApp = () => {
                                 autoComplete="off" 
                             />
 
-                            <button className="btn btn-outline-primary mt-1 btn-block" >
+                            <button
+                            type="submit"   
+                            className="btn btn-outline-primary mt-1 btn-block" >
                                 Add
                             </button>
                         </form>
