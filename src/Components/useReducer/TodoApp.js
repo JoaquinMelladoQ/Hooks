@@ -3,11 +3,9 @@ import { todoReducer } from './todoReducer'
 import { useForm } from '../../Hooks/useForm'
 import './Styles.css'
 
-const init = () => [{
-    id: new Date().getTime(),
-    desc: 'learn react',
-    done: false
-}]
+const init = () => {
+    return JSON.parse(localStorage.getItem('todos')) || []
+}
 
 export const TodoApp = () => {
 
