@@ -38,7 +38,23 @@ export const TodoApp = () => {
                     </ul>
                 </div>
                 <div className="col-5">
-                    Add
+                    <h4>Add todo </h4>
+                    <hr />
+
+                        <form>
+                            <input 
+                                type="text"
+                                name="description"
+                                className="form-control"
+                                placeholder="Learn..."
+                                autoComplete="off" 
+                            />
+
+                            <button className="btn btn-outline-primary mt-1 btn-block" >
+                                Add
+                            </button>
+                        </form>
+
                 </div>
             </div>
         </div>
