@@ -28,3 +28,4 @@
 
 ![CounterApp](assets/coords-code.png)
 ![CounterApp](assets/coords.png)
+![CounterApp](assets/final-example.png)
