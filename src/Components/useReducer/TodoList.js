@@ -1,4 +1,5 @@
 import React from 'react'
+import { TodoListItem } from './TodoListItem'
 
 export const TodoList = ({ todos, handleDelete, handleToggle }) => {
     return (
@@ -6,23 +7,13 @@ export const TodoList = ({ todos, handleDelete, handleToggle }) => {
             <ul className="list-group list-group-flush">
                     {
                         todos.map( (todo, i) => (
-                            <li
-                            key={ todo.id }
-                            className="list-group-item"
-                            >
-                                <p 
-                                className={ `${ todo.done && 'complete' }` }
-                                onClick={ () => handleToggle( todo.id ) } 
-                                >
-                                    { i + 1 }. { todo.desc }
-                                </p>
-                                <button 
-                                onClick={ () => handleDelete( todo.id ) }
-                                className="btn btn-danger" 
-                                >
-                                    Delete
-                                </button>
-                            </li>
+                           <TodoListItem
+                                key={ todo.id }
+                                todo={ todo }
+                                index={ i }
+                                handleDelete={ handleDelete }
+                                handleToggle={ handleToggle }
+                            />
                         ) )
                     }
             </ul>
