@@ -3,7 +3,7 @@ import { todoReducer } from './todoReducer'
 import { useForm } from '../../Hooks/useForm'
 import './Styles.css'
 
-const initialState = [{
+const init = () => [{
     id: new Date().getTime(),
     desc: 'learn react',
     done: false
@@ -11,7 +11,7 @@ const initialState = [{
 
 export const TodoApp = () => {
 
-    const [ todos, dispatch ] = useReducer( todoReducer, initialState )
+    const [ todos, dispatch ] = useReducer( todoReducer, [], init )
 
     const [ { description }, handleInputChange, reset  ] = useForm({
         description: ''
