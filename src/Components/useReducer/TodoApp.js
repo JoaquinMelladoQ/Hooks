@@ -13,7 +13,7 @@ export const TodoApp = () => {
 
     const [ todos, dispatch ] = useReducer( todoReducer, initialState )
 
-    const [ { description }, handleInputChange ] = useForm({
+    const [ { description }, handleInputChange, reset  ] = useForm({
         description: ''
     })
 
@@ -25,7 +25,7 @@ export const TodoApp = () => {
          const newTodo = {
              id: new Date().getTime(),
              desc: description,
-             done: false
+             done: false 
          }
      
          const action = {
@@ -33,6 +33,7 @@ export const TodoApp = () => {
              payload: newTodo
          }
          dispatch(action)
+         reset()
     }
 
 
