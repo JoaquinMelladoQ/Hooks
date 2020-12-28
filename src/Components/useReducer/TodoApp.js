@@ -35,6 +35,13 @@ export const TodoApp = () => {
         })
     }
 
+    const handleAddTodo = ( newTodo ) => {
+        dispatch({
+            type: 'add',
+            payload: newTodo
+        })
+    }
+
 
     const handleSubmit = (e) => {
          e.preventDefault()
